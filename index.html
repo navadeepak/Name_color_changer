@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+<body id="clor">
+  <svg width="0" height="0">
+    <filter id="f" x="-50%" y="-200%" width="200%" height="500%">
+      <feGaussianBlur stdDeviation="35"></feGaussianBlur>
+      <feColorMatrix type="saturate" values="1.3"></feColorMatrix>
+      <feComposite in="SourceGraphic"></feComposite>
+    </filter>
+  </svg>
+  <h1 id="txtarea" onclick="txtch()">enter your name!<br>click</h1>
+  <div>
+    <button id="bt_1" onclick="light()">bg_light</button>
+    <button id="bt_2" onclick="dark()">bg_dark</button>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

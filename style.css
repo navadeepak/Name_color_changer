@@ -1,0 +1,70 @@
+/* author: Ana Tudor
+https://codepen.io/thebabydino/pen/rNPOpJK
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@property --k {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+*{
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #000;
+}
+
+svg[height="0"] {
+  position: absolute;
+}
+
+h1 {
+  --k: 0;
+  place-self: center;
+  background: linear-gradient(90deg, hsl(calc(var(--k)*1turn), 95%, 65%), 
+  hsl(calc(var(--k)*1turn + 90deg), 95%, 65%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font: 900 clamp(0.875em, 7.25vw, 5em) 'Poppins', sans-serif;
+  filter: url(#f);
+  text-align: center;
+  text-transform: uppercase;
+  animation: k 20s linear infinite;
+  margin-top: 30vh;
+}
+
+@keyframes k {
+  to {
+    --k: 1 ;
+  }
+}
+button{
+  background-color: transparent;
+  width: fit-content;
+  height: fit-content;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 5px;
+}
+div{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
